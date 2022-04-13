@@ -1,1 +1,11 @@
-<app-form></app-form>
+<br>
+<br>
+<!--  THIS IS TURN OFF AND TURN OFF BUTTON -->
+<app-calculator *ngIf="show"></app-calculator>
+<app-science-calc *ngIf="!show"></app-science-calc>
+
+<!--  THIS IS CSS OF THE BUTTON BOOTSTRAP -->
+<div class="jumbotron text-center">
+    <button (click)="toggle()" class="btn btn-primary jumbotron text-center">SWITCH</button>  
+</div>
+
