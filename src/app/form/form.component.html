@@ -1,0 +1,49 @@
+<br>
+<br>
+<div class="container jumbotron card-body" style="background-color: rgb(92, 191, 244);">
+    <h2 class="text-center mb-5">Get In Touch</h2>
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <form>
+                <div class="form-group">
+
+                    <input type="text" #fir class="form-control" name="First name" placeholder="First Name"
+                        style="font-family: cursive;">
+
+                </div>
+                <br>
+                <div class="form-group">
+
+                    <input type="text" #lt style="font-family: cursive;" class="form-control" name="Last name"
+                        placeholder="Last Name" formControlName="Last name">
+                </div>
+                <br>
+                <div class="form-group">
+
+                    <input type="email" #eml style="font-family: cursive;" class="form-control" name="Email"
+                        aria-describedby="emailHelp" placeholder="Enter email" formControlName="Email">
+
+                </div>
+                <br>
+                <div class="form-group">
+
+                    <textarea class="form-control" #txt style="font-family: cursive;" placeholder="Type your message"
+                        formControlName="Comment" name="Comment">
+                    </textarea>
+                </div>
+                <br>
+
+                <div>
+                    <button type="button" (click)="getValue(fir.value,lt.value,eml.value,txt.value)"
+                        class="btn btn-primary">Submit</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <br>
+    <div class="jumbotron card-footer" style="background-color: white;">
+        <p style="font-size: medium;font-style: italic;font-family: cursive;">Full Name : {{first}} {{last}}</p>
+        <p style="font-size: medium;font-style: italic;font-family: cursive;">Email Address : {{email}}</p>
+        <p style="font-size: medium;font-style: italic;font-family: cursive;">Comment : {{text}}</p>
+    </div>
